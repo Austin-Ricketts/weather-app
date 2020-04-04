@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    
+
     $(".btn-primary").on("click", function() {
         var apiKey = "14275cb63b6d277176cc8032394e4196";
         var userInput = $.trim($("#city-search").val().toString());
@@ -11,7 +11,11 @@ $(document).ready(function() {
           })
             .then(function(response) {
               console.log(response);
-        
+              $(".city").html("<h1>" + response.name + " Weather Details</h1>");
+              $(".wind").text("Wind Speed: " + response.wind.speed);
+              $(".humidity").text("Humidity: " + response.main.humidity);
+              var tempF = (response.main.temp - 273.15) * 1.80 + 32;
+              $(".tempF").text("Temperature (F) " + tempF.toFixed(2));
         
               
               

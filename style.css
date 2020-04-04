@@ -54,7 +54,29 @@ body, html {
       border-color: slategrey;
   }
 
-  #chosen-cities {
-    color: rgb(115, 177, 185);
+  .headings {
+    /*background-color: slategrey;*/
+    color: rgb(21, 37, 39);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  .h4 { 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(238, 133, 64);
+  }
+
+  .city {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  .wind {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  .humidity {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  .tempF {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
