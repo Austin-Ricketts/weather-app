@@ -6,7 +6,7 @@ body, html {
     position: relative;
     z-index:-101;
   }
-  
+/*I learned how to do this background video through jsfiddle.net*/
 #video-background { 
     position: fixed;
       top: 0;
@@ -19,7 +19,7 @@ body, html {
   }
 
 .display-3 {
-    background-color: darkgray;
+    background-color: transparent;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
 }
@@ -40,4 +40,21 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .card {
+      background-color: rgb(104, 174, 179);
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      border-color: slategrey;
+  }
+
+  .btn-primary {
+      background-color: rgb(192, 166, 142);
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      border-color: slategrey;
+  }
+
+  #chosen-cities {
+    color: rgb(115, 177, 185);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
