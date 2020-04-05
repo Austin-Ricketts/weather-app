@@ -1,12 +1,5 @@
 $(document).ready(function() {
 
-    var now = moment();
-    var firstDay = now.format("MMMM-DD-YYYY");
-    var secondDay = now.add(1, "d").format("MMMM-DD-YYYY");
-    var thirdDay = now.add(2, "d").format("MMMM-DD-YYYY");
-    var fourthDay = now.add(3, "d").format("MMMM-DD-YYYY");
-    var fifthDay = now.add(4, "d").format("MMMM-DD-YYYY");
-
     $(".btn-primary").on("click", function() {
         var apiKey = "14275cb63b6d277176cc8032394e4196";
         var userInput = $.trim($("#city-search").val().toString());
@@ -19,6 +12,7 @@ $(document).ready(function() {
             .then(function(response) {
               console.log(response);
               $(".city").html("<h1>" + response.name + " Weather Details</h1>");
+              $(".main").text("Main Weather: " + response.weather[0].main + ", specifically " + response.weather[0].description);
               $(".wind").text("Wind Speed: " + response.wind.speed + " mph");
               $(".humidity").text("Humidity: " + response.main.humidity + "%");
               var tempF = (response.main.temp - 273.15) * 1.80 + 32;
@@ -104,14 +98,12 @@ $(document).ready(function() {
       });
 
     /*getStorage();
-
     function getStorage() {
         var cityNames = JSON.parse(localStorage.getItem("cities", ""));
         console.log(cityNames);
     
         $("#city-names").val(cityNames); 
     }
-
     $(".btn-primary").on("click", function(event) {
         event.preventDefault();
         var cityInfo = $.trim($("#city-search").val());
