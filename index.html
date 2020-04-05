@@ -38,13 +38,18 @@
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <h2 class="headings" id="weather-report">Weather Report</h2>
+                    <h2 class="headings" id="weather-report" style="text-align: center;">Weather Report</h2>
                     <div class="city"></div> <img class="icon">
                     <div class="wind"></div>
                     <div class="humidity"></div>
                     <div class="tempF"></div>
                     <div class="cloud"></div>
                 </div>
+            </div>
+            <br>
+            <div class="row">
+                <h4 class="h4" id="chosen-cities">Chosen Cities</h4>
+                <p id="city-names"></p>
             </div>
             <br>
             <div class="row">
@@ -58,41 +63,41 @@
                         <a class="btn btn-primary">Choose City</a>
                     </div>
                 </div>
-                <div class="col-md-2">
-                    <div class="card" style="width: 18rem;">
-                        <div class="five-wind-4"></div> <div class="five-humidity-4"></div> <div class="five-tempF-4"></div> <div class="five-cloud-4"></div>
-                    </div>
-                </div>
-
-                <div class="col-md-2">
-                    <div class="card" style="width: 18rem;">
-                        <div class="five-wind-12"></div> <div class="five-humidity-12"></div> <div class="five-tempF-12"></div> <div class="five-cloud-12"></div>
-                    </div>
-                </div>
-
-                <div class="col-md-2">
-                    <div class="card" style="width: 18rem;">
-                        <div class="five-wind-20"></div> <div class="five-humidity-20"></div> <div class="five-tempF-20"></div> <div class="five-cloud-20"></div>
-                    </div> 
-                </div>
-
-                <div class="col-md-2">
-                    <div class="card" style="width: 18rem;">
-                        <div class="five-wind-28"></div> <div class="five-humidity-28"></div> <div class="five-tempF-28"></div> <div class="five-cloud-28"></div>
-                    </div>
-                </div>
-
-                <div class="col-md-2">
-                    <div class="card" style="width: 18rem;">
-                        <div class="five-wind-36"></div> <div class="five-humidity-36"></div> <div class="five-tempF-36"></div> <div class="five-cloud-36"></div>
-                    </div>
-                </div>
+                
             </div>
             <br>
             <div class="row">
-                <h4 class="h4" id="chosen-cities">Chosen Cities</h4>
-                <p id="city-names"></p>
+                <div class="col-md-2">
+                    <div class="card" style="width: 18rem; border-top: none">
+                        <div class="first-day"></div><div class="five-wind-4"></div> <div class="five-humidity-4"></div> <div class="five-tempF-4"></div> <div class="five-cloud-4"></div>
+                    </div>
+                </div>
+    
+                <div class="col-md-2">
+                    <div class="card" style="width: 18rem; border-top: none">
+                        <div class="second-day"></div><div class="five-wind-12"></div> <div class="five-humidity-12"></div> <div class="five-tempF-12"></div> <div class="five-cloud-12"></div>
+                    </div>
+                </div>
+    
+                <div class="col-md-2">
+                    <div class="card" style="width: 18rem; border-top: none">
+                        <div class="third-day"></div><div class="five-wind-20"></div> <div class="five-humidity-20"></div> <div class="five-tempF-20"></div> <div class="five-cloud-20"></div>
+                    </div> 
+                </div>
+    
+                <div class="col-md-2">
+                    <div class="card" style="width: 18rem; border-top: none">
+                        <div class="fourth-day"></div><div class="five-wind-28"></div> <div class="five-humidity-28"></div> <div class="five-tempF-28"></div> <div class="five-cloud-28"></div>
+                    </div>
+                </div>
+    
+                <div class="col-md-2">
+                    <div class="card" style="width: 18rem; border-top: none">
+                        <div class="fifth-day"></div><div class="five-wind-36"></div> <div class="five-humidity-36"></div> <div class="five-tempF-36"></div> <div class="five-cloud-36"></div>
+                    </div>
+                </div>
             </div>
+            
         </div>
 
     </div>
@@ -105,6 +110,7 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" type="text/javascript"></script>
     <script src="./script.js"></script>
     <script type="text/javascript">
     
