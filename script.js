@@ -34,13 +34,51 @@ $(document).ready(function() {
           })
             .then(function(response) {
               console.log(response);
-              console.log(response.list[4].wind.speed);
-              $(".five-city").html("<h1>" + response.city.name + " Weather Details</h1>");
-              $(".five-wind").text("Wind Speed: " + response.list[4].wind.speed + " mph");
-              $(".five-humidity").text("Humidity: " + response.list[4].main.humidity + "%");
+              var list = response.list;
+              console.log(list);
+
+              /*$(".five-city-4").html("<h1>" + response.city.name + " Weather Details</h1>");*/
+              $(".five-wind-4").text("Wind Speed: " + response.list[4].wind.speed + " mph");
+              $(".five-humidity-4").text("Humidity: " + response.list[4].main.humidity + "%");
               var tempF = (response.list[4].main.temp - 273.15) * 1.80 + 32;
-              $(".five-tempF").text("Temperature (F) " + tempF.toFixed(2));
-              $(".five-cloud").text("Cloudiness: " + response.list[4].clouds.all + "%");
+              $(".five-tempF-4").text("Temperature (F) " + tempF.toFixed(2));
+              $(".five-cloud-4").text("Cloudiness: " + response.list[4].clouds.all + "%");
+              
+              /*$(".five-city-12").html("<h1>" + response.city.name + " Weather Details</h1>");*/
+              $(".five-wind-12").text("Wind Speed: " + response.list[12].wind.speed + " mph");
+              $(".five-humidity-12").text("Humidity: " + response.list[12].main.humidity + "%");
+              var tempF = (response.list[12].main.temp - 273.15) * 1.80 + 32;
+              $(".five-tempF-12").text("Temperature (F) " + tempF.toFixed(2));
+              $(".five-cloud-12").text("Cloudiness: " + response.list[12].clouds.all + "%");
+              
+              /*$(".five-city-20").html("<h1>" + response.city.name + " Weather Details</h1>");*/
+              $(".five-wind-20").text("Wind Speed: " + response.list[20].wind.speed + " mph");
+              $(".five-humidity-20").text("Humidity: " + response.list[20].main.humidity + "%");
+              var tempF = (response.list[20].main.temp - 273.15) * 1.80 + 32;
+              $(".five-tempF-20").text("Temperature (F) " + tempF.toFixed(2));
+              $(".five-cloud-20").text("Cloudiness: " + response.list[20].clouds.all + "%");
+              
+              /*$(".five-city-28").html("<h1>" + response.city.name + " Weather Details</h1>");*/
+              $(".five-wind-28").text("Wind Speed: " + response.list[28].wind.speed + " mph");
+              $(".five-humidity-28").text("Humidity: " + response.list[28].main.humidity + "%");
+              var tempF = (response.list[28].main.temp - 273.15) * 1.80 + 32;
+              $(".five-tempF-28").text("Temperature (F) " + tempF.toFixed(2));
+              $(".five-cloud-28").text("Cloudiness: " + response.list[28].clouds.all + "%");
+              
+              /*$(".five-city-36").html("<h1>" + response.city.name + " Weather Details</h1>");*/
+              $(".five-wind-36").text("Wind Speed: " + response.list[36].wind.speed + " mph");
+              $(".five-humidity-36").text("Humidity: " + response.list[36].main.humidity + "%");
+              var tempF = (response.list[36].main.temp - 273.15) * 1.80 + 32;
+              $(".five-tempF-36").text("Temperature (F) " + tempF.toFixed(2));
+              $(".five-cloud-36").text("Cloudiness: " + response.list[36].clouds.all + "%");
+                  
+
+              /*$(".five-city-4").html("<h1>" + response.city.name + " Weather Details</h1>");
+              $(".five-wind-4").text("Wind Speed: " + response.element[i].wind.speed + " mph");
+              $(".five-humidity-4").text("Humidity: " + response.element[i].main.humidity + "%");
+              var tempF = (response.element[i].main.temp - 273.15) * 1.80 + 32;
+              $(".five-tempF-4").text("Temperature (F) " + tempF.toFixed(2));
+              $(".five-cloud-4").text("Cloudiness: " + response.element[i].clouds.all + "%");*/
         
               
               
