@@ -14,6 +14,7 @@
   </head>
 
   <body>
+      <!--Here I used a jumbtron from Bootstrap. I had been wanting to add background video in one of my sites, so I looked into it and found some code from jsfiddle.net that I could modify. I got the video from Pixabay, and they don't ask for an attribution.-->
     <header class="jumbotron">
         <video id="video-background" preload muted autoplay loop>
             <source src="assets/cloud-video.mp4" type="video/mp4">
@@ -27,6 +28,7 @@
             <br>
             <br>
             <div class="row">
+                <!--This card is where the user can search for the weather in a city of their choice.-->
                 <div class="card" class="col-md-2">
                     <div class="card-header">
                       Search the Weather in a City
@@ -37,6 +39,7 @@
                         <a class="btn btn-primary">Choose City</a>
                     </div>
                 </div>
+                <!--This is where the parsed information comes from the script.js file and is placed.-->
                 <div class="col-md-6">
                     <h2 class="headings" id="weather-report" style="text-align: center;">Weather Report</h2>
                     <div class="city"></div>
@@ -45,7 +48,9 @@
                     <div class="humidity"></div>
                     <div class="tempF"></div>
                     <div class="cloud"></div>
+                    <div class="uv"></div>
                 </div>
+                <!--This card is where the user can pick a city to display the five day forecast.-->
                 <div class="card" class="col-md-2">
                     <div class="card-header">
                       5-Day Forecast
@@ -58,6 +63,7 @@
                 </div>
             </div>
             <br>
+            <!--This is where the buttons would go after they came from localStorage. They will be fixed in the future.-->
             <div class="row">
                 <h4 class="h4" id="chosen-cities">Chosen Cities</h4>
                 <div id="buttons"></div>
@@ -67,6 +73,7 @@
                 
             </div>
             <br>
+            <!--This is where the five day forecast information is displayed.-->
             <div class="row">
                 <div class="col-md-2">
                     <div class="card" style="width: 18rem; border-top: none">
@@ -108,7 +115,7 @@
 
     
     
-    
+    <!--These are the javascript, jquery, and moment.js resources used in the script.js file.-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" type="text/javascript"></script>

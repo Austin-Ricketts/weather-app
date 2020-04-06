@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     
-
+    /*Here is the code for the current day's weather. It is a button that makes an ajax call to the open weather api. The response of from the call is an object and that object is parsed into using jquery methods. The parsed information is then dynamically placed into the html file.*/
     $(".btn-primary").on("click", function() {
         var apiKey = "14275cb63b6d277176cc8032394e4196";
         var userInput = $.trim($("#city-search").val().toString());
@@ -25,7 +25,7 @@ $(document).ready(function() {
               
             });
       });
-
+      /*This onclick event calls the five day forecast for whichever city you write into the input box. Similarly as above, it parses into the returned data using jquery, then places that data into the DOM.*/
       $(".btn-primary").on("click", function() {
         var apiKey = "14275cb63b6d277176cc8032394e4196";
         var fiveDayInput = $.trim($("#five-day-search").val().toString());
@@ -39,7 +39,7 @@ $(document).ready(function() {
               console.log(response);
               var list = response.list;
               console.log(list);
-
+              /*Here are moment.js features. They are used to append the date to each day of the five day forecast. The now var is repeated after each line, because there was some bubbling occuring and falsifying the addition of the days.*/
               var now = moment();
               var firstDay = now.format("MMMM-DD-YYYY");
               var now = moment();
@@ -50,7 +50,7 @@ $(document).ready(function() {
               var fourthDay = now.add(3, "d").format("MMMM-DD-YYYY");
               var now = moment();
               var fifthDay = now.add(4, "d").format("MMMM-DD-YYYY");
-
+            /*Below is the jquery that parses into the response object that was returned from the open weather api. An array of 40 items is returned when you call this object correlating to 3 hour periods. To get five days, I used the list numbers, which are properly spaced to get information from five different days in the object.*/
               $(".first-day").text(firstDay);
               $(".five-wind-4").text("Wind Speed: " + response.list[4].wind.speed + " mph");
               $(".five-humidity-4").text("Humidity: " + response.list[4].main.humidity + "%");
@@ -92,30 +92,26 @@ $(document).ready(function() {
       });
 
     
+    /*The code below was an attempt to work with localStorage but it isn't functional. I couldn't figure out how to turn information from onclick events into an array in localStorage. I wanted to do that so that I could loop through the array and make buttons from the data elements.*/
 
+    /*function getStorage() {
 
-    function getStorage() {
-
-        var cityList = JSON.parse(localStorage.getItem("localArray"));
-        console.log(cityList);
-        if (cityList !== null) {
-        localArray = cityList;
-  }
+        
 
 
 
 
 
-        /*var cityNames = JSON.parse(localStorage.getItem("cities"));
+        var cityNames = JSON.parse(localStorage.getItem("cities"));
         console.log(cityNames);
         var btnAdd = $("ul").prepend("<button></button>");
-        btnAdd.html($.trim($(cityNames).val()));*/
+        btnAdd.html($.trim($(cityNames).val()));
 
 
         
 
 
-    }
+    }*/
     
     
 
