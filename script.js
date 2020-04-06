@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    
+
     $(".btn-primary").on("click", function() {
         var apiKey = "14275cb63b6d277176cc8032394e4196";
         var userInput = $.trim($("#city-search").val().toString());
@@ -83,34 +85,78 @@ $(document).ready(function() {
               var tempF = (response.list[36].main.temp - 273.15) * 1.80 + 32;
               $(".five-tempF-36").text("Temperature (F) " + tempF.toFixed(2));
               $(".five-cloud-36").text("Cloudiness: " + response.list[36].clouds.all + "%");
-                  
-
-              /*$(".five-city-4").html("<h1>" + response.city.name + " Weather Details</h1>");
-              $(".five-wind-4").text("Wind Speed: " + response.element[i].wind.speed + " mph");
-              $(".five-humidity-4").text("Humidity: " + response.element[i].main.humidity + "%");
-              var tempF = (response.element[i].main.temp - 273.15) * 1.80 + 32;
-              $(".five-tempF-4").text("Temperature (F) " + tempF.toFixed(2));
-              $(".five-cloud-4").text("Cloudiness: " + response.element[i].clouds.all + "%");*/
         
               
               
             });
       });
 
-    /*getStorage();
-    function getStorage() {
-        var cityNames = JSON.parse(localStorage.getItem("cities", ""));
-        console.log(cityNames);
     
-        $("#city-names").val(cityNames); 
+
+
+    function getStorage() {
+
+        var cityList = JSON.parse(localStorage.getItem("localArray"));
+        console.log(cityList);
+        if (cityList !== null) {
+        localArray = cityList;
+  }
+
+
+
+
+
+        /*var cityNames = JSON.parse(localStorage.getItem("cities"));
+        console.log(cityNames);
+        var btnAdd = $("ul").prepend("<button></button>");
+        btnAdd.html($.trim($(cityNames).val()));*/
+
+
+        
+
+
     }
-    $(".btn-primary").on("click", function(event) {
+    
+    
+
+    
+    /*$(".btn-primary").on("click", function(event) {
         event.preventDefault();
-        var cityInfo = $.trim($("#city-search").val());
+        var city = $("#city-search").val();
+
+        
+
+        
+        
+        var key = $("#city-search").val();
+        localStorage.setItem(key, city);
+        
+        var keyLoop = localStorage.key("");
+        console.log(keyLoop);
+
+        for (let i = 0; i < keyLoop.length; i++) {
+            const element = keyLoop[i];
+            console.log(element);
+            var b = $("<button>");
+          // Adding a class of movie to our button
+          b.addClass("city");
+          // Adding a data-attribute
+          b.attr("data-name", element);
+          // Providing the initial button text
+          b.text(element);
+          // Adding the button to the HTML
+          $("#buttons").append(b);
+            
+        }
+
+      });
+
+      getStorage();
+      
+
+      /*var cityInfo = $.trim($("#city-search").val());
         localStorage.setItem("cities", JSON.stringify(cityInfo));
-        console.log(cityInfo);
-        $("#city-names").prepend(cityInfo);
-      });*/
+        console.log(cityInfo);*/
 
       
 

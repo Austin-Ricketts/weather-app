@@ -83,3 +83,9 @@ body, html {
   .cloud {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
   }
+
+  li {
+    background-color: rgb(104, 174, 179);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-color: slategrey;
+  }
